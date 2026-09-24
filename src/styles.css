@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+  background: #f6f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input, select, textarea { font: inherit; }
+button:disabled { cursor: not-allowed; opacity: .55; }
+
+.card { @apply rounded-2xl border border-slate-200/80 bg-white shadow-[0_8px_30px_-22px_rgba(15,23,42,0.25)]; }
+.btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-xl bg-slate-950 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700; }
+.btn-white { @apply inline-flex items-center justify-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-indigo-50; }
+.btn-secondary { @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700; }
+.input { @apply w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm outline-none transition placeholder:text-slate-400 focus:border-indigo-400 focus:ring-4 focus:ring-indigo-50; }
+.field-label { @apply mb-1.5 block text-xs font-semibold text-slate-600; }
+.field-icon { @apply flex items-center overflow-hidden rounded-xl border border-slate-200 bg-white text-slate-400 focus-within:border-indigo-400 focus-within:ring-4 focus-within:ring-indigo-50; }
+.field-icon input { @apply min-w-0 flex-1 border-0 bg-transparent px-3 py-2.5 text-sm outline-none placeholder:text-slate-400; }
+.eyebrow { @apply text-[11px] font-bold uppercase tracking-[0.14em] text-indigo-600; }
+.page-heading { @apply flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between; }
+.page-heading h2 { @apply text-2xl font-black tracking-tight text-slate-900; }
+.page-heading p:not(.eyebrow) { @apply mt-1 text-sm leading-6 text-slate-500; }
+.hero-card { @apply flex flex-col justify-between gap-6 overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-indigo-950 to-indigo-800 p-6 shadow-xl shadow-indigo-100 sm:flex-row sm:items-end sm:p-8; }
+.hero-chip { @apply inline-flex rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-indigo-100; }
+.badge-green, .badge-red, .badge-amber, .badge-indigo { @apply inline-flex items-center rounded-full px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.06em]; }
+.badge-green { @apply bg-emerald-50 text-emerald-700; }
+.badge-red { @apply bg-rose-50 text-rose-700; }
+.badge-amber { @apply bg-amber-50 text-amber-700; }
+.badge-indigo { @apply bg-indigo-50 text-indigo-700; }
+.status-present, .status-absent { @apply inline-flex min-w-20 justify-center rounded-full px-2.5 py-1.5 text-[11px] font-extrabold tracking-[0.03em]; }
+.status-present { @apply bg-emerald-50 text-emerald-700; }
+.status-absent { @apply bg-rose-50 text-rose-700; }
+.filter-chip { @apply rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[11px] font-bold text-slate-500; }
+.filter-chip-active { @apply border-indigo-200 bg-indigo-50 text-indigo-700; }
+.callout, .callout-danger { @apply flex gap-3 rounded-2xl border p-4 text-sm; }
+.callout { @apply border-indigo-100 bg-indigo-50/70 text-indigo-700; }
+.callout-danger { @apply border-rose-100 bg-rose-50 text-rose-700; }
+.list-line { @apply flex items-center justify-between gap-4 border-b border-slate-100 py-3 last:border-0; }
+.table-scroll { @apply overflow-x-auto; }
+.table { @apply min-w-full text-left text-sm; }
+.table th { @apply whitespace-nowrap border-b border-slate-100 bg-slate-50/60 px-4 py-3 text-[10px] font-extrabold uppercase tracking-[0.09em] text-slate-400; }
+.table td { @apply border-b border-slate-100 px-4 py-4 align-middle text-slate-600 last:border-b-0; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
